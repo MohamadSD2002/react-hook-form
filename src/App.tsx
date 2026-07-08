@@ -1,5 +1,7 @@
+import CreateProductForm from "./features/products/components/create-product-form";
+
 function App() {
-  return <h1>hi</h1>;
+  return <CreateProductForm />;
 }
 
 export default App;
