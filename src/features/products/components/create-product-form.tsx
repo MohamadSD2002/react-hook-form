@@ -63,7 +63,9 @@ function CreateProductForm() {
 
       <div className="form__row">
         <Input
-          {...register("price")}
+          {...register("price", {
+            valueAsNumber: true,
+          })}
           type="number"
           label="Price"
           placeholder="999"
@@ -72,7 +74,9 @@ function CreateProductForm() {
 
         <div>
           <Input
-            {...register("discount")}
+            {...register("discount", {
+              valueAsNumber: true,
+            })}
             type="number"
             label="Discount"
             placeholder="10"

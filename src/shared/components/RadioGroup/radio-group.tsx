@@ -1,4 +1,5 @@
 import type { ComponentProps } from "react";
+
 import "./radio-group.css";
 
 type Option = {
@@ -6,32 +7,31 @@ type Option = {
   value: string;
 };
 
-type RadioGroupProps = {
+type RadioGroupProps = ComponentProps<"input"> & {
   label?: string;
   error?: string;
-  options: Option[];
-} & ComponentProps<"input">;
+  options: readonly Option[];
+};
 
-export function RadioGroup(props: RadioGroupProps) {
-  const { label, error, options, name, ...rest } = props;
-
+export function RadioGroup({
+  label,
+  error,
+  options,
+  ...rest
+}: RadioGroupProps) {
   return (
     <div className="radio-group">
-      {label && <p className="radio-group__title">{label}</p>}
+      {label && <p className="radio-group__label">{label}</p>}
 
-      {options.map((option) => (
-        <label key={option.value} className="radio-group__item">
-          <input
-            className="radio-group__field"
-            {...rest}
-            name={name}
-            type="radio"
-            value={option.value}
-          />
+      <div className="radio-group__options">
+        {options.map((option) => (
+          <label key={option.value} className="radio-group__option">
+            <input type="radio" value={option.value} {...rest} />
 
-          <span>{option.label}</span>
-        </label>
-      ))}
+            {option.label}
+          </label>
+        ))}
+      </div>
 
       {error && <p className="radio-group__error">{error}</p>}
     </div>

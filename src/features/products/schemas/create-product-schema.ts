@@ -8,11 +8,11 @@ export const createProductSchema = z.object({
 
   description: z.string().optional(),
 
-  price: z.coerce.number().min(0, "Price cannot be negative"),
+  price: z.number().min(0, "Price cannot be negative"),
 
-  discount: z.coerce.number().min(0).max(50, "Discount cannot exceed 50%"),
+  discount: z.number().min(0).max(50, "Discount cannot exceed 50%"),
 
-  categoryId: z.coerce.number(),
+  categoryId: z.number(),
 
   inStock: z.boolean(),
 
