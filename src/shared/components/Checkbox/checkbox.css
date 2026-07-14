@@ -1,0 +1,23 @@
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.checkbox__field {
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox__error {
+  margin-top: 8px;
+
+  color: #ef4444;
+  font-size: 13px;
+}

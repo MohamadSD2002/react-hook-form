@@ -1,0 +1,49 @@
+.form {
+  width: 100%;
+  max-width: 560px;
+
+  padding: 32px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+
+  transition: box-shadow 0.2s ease;
+}
+
+.form:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+}
+
+.form__title {
+  font-size: 28px;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.form__subtitle {
+  color: #71717a;
+
+  margin-bottom: 32px;
+}
+
+.form__row {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .form {
+    padding: 24px;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+}
