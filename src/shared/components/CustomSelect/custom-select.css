@@ -1,0 +1,37 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.select__label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.select__field {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d4d4d8;
+  border-radius: 10px;
+
+  background: white;
+
+  transition: 0.2s;
+}
+
+.select__field:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.select__error {
+  color: #ef4444;
+  font-size: 13px;
+}
